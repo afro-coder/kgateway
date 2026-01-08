@@ -93,6 +93,14 @@ func (d *HttpListenerPolicyIr) Equals(in any) bool {
 		return false
 	}
 
+	if !cmputils.PointerValsEqual(d.preserveExternalRequestId, d2.preserveExternalRequestId) {
+		return false
+	}
+
+	if !cmputils.PointerValsEqual(d.generateRequestId, d2.generateRequestId) {
+		return false
+	}
+
 	// Check xffNumTrustedHops
 	if !cmputils.PointerValsEqual(d.xffNumTrustedHops, d2.xffNumTrustedHops) {
 		return false
@@ -130,14 +138,6 @@ func (d *HttpListenerPolicyIr) Equals(in any) bool {
 	}
 
 	if !cmputils.PointerValsEqual(d.preserveHttp1HeaderCase, d2.preserveHttp1HeaderCase) {
-		return false
-	}
-
-	if !cmputils.PointerValsEqual(d.preserveExternalRequestId, d2.preserveExternalRequestId) {
-		return false
-	}
-
-	if !cmputils.PointerValsEqual(d.generateRequestId, d2.generateRequestId) {
 		return false
 	}
 

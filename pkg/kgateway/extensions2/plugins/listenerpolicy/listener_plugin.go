@@ -355,7 +355,7 @@ func (p *listenerPolicyPluginGwPass) ApplyHCM(
 		out.UseRemoteAddress = wrapperspb.Bool(*policy.useRemoteAddress)
 	}
 	if policy.preserveExternalRequestId != nil {
-		out.PreserveExternalRequestId = wrapperspb.Bool(*policy.preserveExternalRequestId)
+		out.PreserveExternalRequestId = *policy.preserveExternalRequestId
 	}
 	if policy.generateRequestId != nil {
 		out.GenerateRequestId = wrapperspb.Bool(*policy.generateRequestId)
