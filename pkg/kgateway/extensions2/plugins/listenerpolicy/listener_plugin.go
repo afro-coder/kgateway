@@ -354,6 +354,12 @@ func (p *listenerPolicyPluginGwPass) ApplyHCM(
 	if policy.useRemoteAddress != nil {
 		out.UseRemoteAddress = wrapperspb.Bool(*policy.useRemoteAddress)
 	}
+	if policy.preserveExternalRequestId != nil {
+		out.PreserveExternalRequestId = wrapperspb.Bool(*policy.preserveExternalRequestId)
+	}
+	if policy.generateRequestId != nil {
+		out.GenerateRequestId = wrapperspb.Bool(*policy.generateRequestId)
+	}
 
 	// translate xffNumTrustedHops
 	if policy.xffNumTrustedHops != nil {

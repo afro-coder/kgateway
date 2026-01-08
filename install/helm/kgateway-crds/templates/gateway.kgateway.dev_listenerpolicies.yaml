@@ -1296,6 +1296,8 @@ spec:
                             - name
                             x-kubernetes-list-type: map
                         type: object
+                      generateRequestId:
+                        type: boolean
                       healthCheck:
                         description: HealthCheck configures [Envoy health checks](https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/health_check/v3/health_check.proto)
                         properties:
@@ -1325,6 +1327,8 @@ spec:
                         maximum: 8192
                         minimum: 1
                         type: integer
+                      preserveExternalRequestId:
+                        type: boolean
                       preserveHttp1HeaderCase:
                         description: |-
                           PreserveHttp1HeaderCase determines whether to preserve the case of HTTP1 request headers.
@@ -3050,6 +3054,8 @@ spec:
                                   - name
                                   x-kubernetes-list-type: map
                               type: object
+                            generateRequestId:
+                              type: boolean
                             healthCheck:
                               description: HealthCheck configures [Envoy health checks](https://www.envoyproxy.io/docs/envoy/latest/api-v3/extensions/filters/http/health_check/v3/health_check.proto)
                               properties:
@@ -3079,6 +3085,8 @@ spec:
                               maximum: 8192
                               minimum: 1
                               type: integer
+                            preserveExternalRequestId:
+                              type: boolean
                             preserveHttp1HeaderCase:
                               description: |-
                                 PreserveHttp1HeaderCase determines whether to preserve the case of HTTP1 request headers.
