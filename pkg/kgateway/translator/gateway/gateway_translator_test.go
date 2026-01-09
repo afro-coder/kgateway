@@ -1173,7 +1173,6 @@ func TestBasic(t *testing.T) {
 		})
 	})
 
-
 	t.Run("HTTPListenerPolicy with acceptHttp10", func(t *testing.T) {
 		test(t, translatorTestCase{
 			inputFile:  "httplistenerpolicy/accept-http10.yaml",
